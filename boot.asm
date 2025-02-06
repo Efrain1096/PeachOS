@@ -25,9 +25,9 @@ print:
 
 print_char:
     mov ah, 0eh ; Sets the AH register to 0EH, because it's needed for the BIOS function to outputting to the screen. 
-    ;mov al, 'A' 
-    ;mov bx, 0
-    int 0x10 ; Calling the BIOS.
+    ;mov al, 'A' ; AL = code of character needed to display.
+    ;mov bx, 0 
+    int 0x10 ; Calling the BIOS video interrupt.
     ret
 
 message: db "Hello World!", 0
